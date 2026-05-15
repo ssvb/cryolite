@@ -1,0 +1,26 @@
+<svg width="1000" height="700" viewBox="0 0 1000 700" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define the overlap (intersection) clip path -->
+  <defs>
+    <clipPath id="overlapClip">
+      <ellipse cx="500" cy="275" rx="275" ry="180" />
+    </clipPath>
+  </defs>
+
+  <!-- Blue non-overlapping area (Top ellipse) -->
+  <ellipse cx="500" cy="275" rx="275" ry="180" fill="#a0b7d7" fill-opacity="0.8" stroke="#4a6ca0" stroke-width="2" />
+
+  <!-- Yellow non-overlapping area (Bottom ellipse) -->
+  <ellipse cx="500" cy="425" rx="275" ry="180" fill="#f6d357" fill-opacity="0.8" stroke="#d49e32" stroke-width="2" />
+
+  <!-- The Intersection (Green area) -->
+  <!-- We re-draw the top ellipse fill but clip it by the bottom shape to get the overlap with a green color -->
+  <ellipse cx="500" cy="425" rx="275" ry="180" fill="#58a065" clip-path="url(#overlapClip)" />
+  
+  <!-- Re-draw the boundary of the top ellipse over the green to keep the clean line -->
+  <ellipse cx="500" cy="275" rx="275" ry="180" fill="none" stroke="#4a6ca0" stroke-width="2" clip-path="url(#overlapClip)" />
+
+  <!-- Text Labels -->
+  <text x="500" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="black">Ruby</text>
+  <text x="500" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" font-weight="bold" fill="black">Cryolite</text>
+  <text x="500" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="black">Crystal</text>
+</svg>

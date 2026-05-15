@@ -7,13 +7,13 @@
   </defs>
 
   <!-- Red non-overlapping area (Top ellipse) -->
-  <ellipse cx="500" cy="275" rx="275" ry="180" fill="#d7b7a0" fill-opacity="0.8" stroke="#4a6ca0" stroke-width="2" />
+  <ellipse cx="500" cy="275" rx="275" ry="180" fill="#FF4D4D" fill-opacity="0.8" stroke="#4a6ca0" stroke-width="2" />
 
   <!-- Blue non-overlapping area (Bottom ellipse) -->
-  <ellipse cx="500" cy="425" rx="275" ry="180" fill="#a0b7d7" fill-opacity="0.8" stroke="#d49e32" stroke-width="2" />
+  <ellipse cx="500" cy="425" rx="275" ry="180" fill="#023E8A" fill-opacity="0.8" stroke="#d49e32" stroke-width="2" />
 
   <!-- The Intersection (Magenta area) -->
-  <!-- We re-draw the top ellipse fill but clip it by the bottom shape to get the overlap with a green color -->
+  <!-- We re-draw the top ellipse fill but clip it by the bottom shape to get the overlap with a magenta color -->
   <ellipse cx="500" cy="425" rx="275" ry="180" fill="#A45A87" clip-path="url(#overlapClip)" />
   
   <!-- Re-draw the boundary of the top ellipse over the magenta to keep the clean line -->
